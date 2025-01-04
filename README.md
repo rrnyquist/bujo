@@ -28,7 +28,7 @@ I recommend adding links to the "migrated" (`- [>]`) and scheduled (`- [<]`) lin
 * [>] migrated
 * [ ] todo
 * [ ] todo
-- [<] scheduled
+* [<] scheduled
 ```
 ### Example Results
 ![BuJo HTML Result](https://github.com/rrnyquist/bujo/blob/main/readme_example.png)
