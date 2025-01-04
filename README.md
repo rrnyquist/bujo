@@ -5,8 +5,11 @@ So, if you like the bullet journal method, you are now able to get that "BuJo" l
 
 Enjoy!
 
-## Getting Started
-The syntax for this snippet is the same as your typical checkboxes. In reader mode, only the "todo" (`- [ ]`) and "done" (`- [x]`) checkboxes can be toggled, while the other symbols remain static. I recommend adding links to the "migrated" (`- [>]`) and scheduled (`- [<]`) line items (this is why their default highlighting is the same color as unpopulated links in Obsidian--it also clues you in to the tasks that you'll have to do another time).
+# Getting Started
+Place bujo.css in your `.obsidian > snippets` directory, and enable it from Obsidian's Appearance Settings menu.
+For more information on adding CSS snippets, see [this guide](https://help.obsidian.md/Extending+Obsidian/CSS+snippets).
+
+The BuJo syntax is the same as your typical checkboxes. In reader mode, only the "todo" (`- [ ]`) and "done" (`- [x]`) checkboxes can be toggled, while the other symbols remain static. I recommend adding links to the "migrated" (`- [>]`) and scheduled (`- [<]`) line items (this is why their default highlighting is the same color as unpopulated links in Obsidian--it also clues you in to the tasks that you'll have to do another time).
 
 ### Syntax Example
 ```
