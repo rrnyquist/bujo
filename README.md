@@ -1,5 +1,5 @@
 # The Bullet Journal Rapid Logging Plugin for Obsidian
-I recently came across the [Bullet Journal Method](https://bulletjournal.com/). Something that impressed me about this method was how simple the basic tenets of the "rapid logging" system were: just a few types of bullets, each one quick to handwrite and easy to read. All the non-actionable bullet items take up the space of a block letter, while the actionable ones (the bullets) are pretty easy to pick out. Instantly, I wanted to implement the format into my favorite note-taking app, [Obsidian](https://obsidian.md/). Although some of the same bullet formatting techniques already exist in a wonderful Obsidian theme called [Minimal](https://minimal.guide/home/) (I highly recommend you go check it out), I decided the formatting syntax needed to be _just so_; and so I decided to [make something from scratch](https://x.com/vincentdnl/status/1268573228626333703). 
+I recently came across the [Bullet Journal Method](https://www.tinyrayofsunshine.com/blog/bullet-journal-guide/). Something that impressed me about this method was how simple the basic tenets of the "rapid logging" system were: just a few types of bullets, each one quick to handwrite and easy to read. All the non-actionable bullet items take up the space of a block letter, while the actionable ones (the bullets) are pretty easy to pick out. Instantly, I wanted to implement the format into my favorite note-taking app, [Obsidian](https://obsidian.md/). Although some of the same bullet formatting techniques already exist in a wonderful Obsidian theme called [Minimal](https://minimal.guide/home/) (I highly recommend you go check it out), I decided the formatting syntax needed to be _just so_; and so I decided to [make something from scratch](https://x.com/vincentdnl/status/1268573228626333703). 
 
 If you like the bullet journal method, you are now able to get that "BuJo" look with just a few lines of CSS code from this repo. It has been tested on both the default and Minimal themes. 
 
@@ -35,7 +35,7 @@ Rapid Logging just adds more task variations. Namely:
 - [~] canceled
 ```
 
-In Obsidian, all the above tasks (except for "todo") will be represented with a completed checkmark. What this plugin does is enable custom formatting for each type, and allow the user to cycle through the plugin types in the order listed above (todo, done, event, note...) using a hotkey. By default, this hotkey is set to `Ctrl + M`. You can change this hotkey by searching "Rapid Logging" in `Options > Hotkeys`.
+In Obsidian, all the above tasks (except for "todo") will be represented with a completed checkmark. What this plugin does is enable custom formatting for each type, and allow the user to cycle through the plugin types in the order listed above (todo, done, event, note...) using a hotkey. By default, this hotkey is set to `Ctrl + Enter`, and the hotkey for toggling in reverse order is `Ctrl + Shift + Enter`. You can change this hotkey by searching "Rapid Logging" in `Options > Hotkeys`.
 
 ### Syntax Example
 ```
