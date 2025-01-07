@@ -1,0 +1,10 @@
+{
+  "id": "bujo-rapidlogging",
+  "name": "BuJo Rapid Logging",
+  "description": "Hotkey for Rapid Logging bullets",
+  "version": "0.0.1",
+  "author": "Richard Nyquist",
+  "authorUrl": "https://github.com/rrnyquist",
+  "isDesktopOnly": false,
+  "minAppVersion": "0.12.19"
+}

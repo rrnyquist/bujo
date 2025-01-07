@@ -1,13 +1,13 @@
 /**** BULLET JOURNAL CSS ****/
 
-/* Significant help: hPiper */
+/* Started with general structure written by hPiper */
 /* https://forum.obsidian.md/t/custom-bullet-points/83764/2 */
 
 /*** BASE FORMATTING ***/
 
-input:not(:checked),
-li > input:not(:checked),
-li > p > input:not(:checked),
+input[type="checkbox"]:not(:checked),
+li > input[type="checkbox"]:not(:checked),
+li > p > input[type="checkbox"]:not(:checked),
 
 input[data-task="x"]:checked,
 li[data-task="x"] > input:checked,
@@ -51,17 +51,18 @@ li[data-task="~"] > p > input:checked
 /**    UNCHECKED BOXES  ("- [ ] ")    **/
 
 /* Add image */
-input:not(:checked),
-li > input:not(:checked),
-li > p > input:not(:checked) {
+input[type="checkbox"]:not(:checked),
+li > input[type="checkbox"]:not(:checked),
+li > p > input[type="checkbox"]:not(:checked) {
   color: var(--color-accent);
   -webkit-mask-image: url('data:image/svg+xml,%0A%3Csvg%20clip-rule%3D%22evenodd%22%20fill-rule%3D%22evenodd%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%222%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2211.998%22%20cy%3D%2211.998%22%20fill-rule%3D%22nonzero%22%20r%3D%225%22/%3E%3C/svg%3E%0A');
 }
 
+
 /* Hover flicker effect */
-input:not(:checked):hover,
-li > input:not(:checked):hover,
-li > p > input:not(:checked):hover {
+input[type="checkbox"]:not(:checked):hover,
+li > input[type="checkbox"]:not(:checked):hover,
+li > p > input[type="checkbox"]:not(:checked):hover {
   color: var(--color-accent);
   opacity: 0.75;
 }
