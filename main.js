@@ -37,7 +37,18 @@ var RapidLogging = /** @class */ (function (_super) {
             hotkeys: [
                 {
                     modifiers: ['Mod'],
-                    key: 'm',
+                    key: 'Enter',
+                },
+            ],
+        });
+        this.addCommand({
+            id: 'toggle-task-reverse',
+            name: 'Toggle task lists in reverse order',
+            callback: function () { return _this.toggleTodosReverse(); },
+            hotkeys: [
+                {
+                    modifiers: ['Mod', 'Shift'],
+                    key: 'Enter',
                 },
             ],
         });
@@ -122,6 +133,19 @@ var RapidLogging = /** @class */ (function (_super) {
         return this.toggleElement(re, this.replaceTodoElement);
     };
 
+    RapidLogging.prototype.toggleTodosReverse = function () {
+        // * [ ] todo
+        // * [x] done
+        // * [o] event
+        // * [-] note
+        // * [>] migrated
+        // * [<] scheduled
+        // * [~] canceled
+        // Defaults to dashes, but keeps in whatever bullet style you originally chose.
+        var re = /(^\s*|^\t*)(\*\s\[\s\]\s|\*\s\[x\]\s|\*\s\[o\]\s|\*\s\[\-\]\s|\*\s\[>\]\s|\*\s\[<\]\s|\*\s\[~\]\s|-\s\[\s\]\s|-\s\[x\]\s|-\s\[o\]\s|-\s\[\-\]\s|-\s\[>\]\s|-\s\[<\]\s|-\s\[~\]\s|\*\s|-\s|\d*\.\s|\*\s|\b|)([^\n\r]*)/gim;
+        return this.toggleElement(re, this.replaceTodoElementReverse);
+    };
+
     RapidLogging.prototype.replaceTodoElement = function (match, spaces, startText, sentence) {
         // console.log(startText);
         if (startText === '* [ ] ') {
@@ -171,6 +195,66 @@ var RapidLogging = /** @class */ (function (_super) {
         }
 
     };
+
+    RapidLogging.prototype.replaceTodoElementReverse = function (match, spaces, startText, sentence) {
+        // console.log(startText);
+
+        // * [ ] todo
+        // * [x] done
+        // * [o] event
+        // * [-] note
+        // * [>] migrated
+        // * [<] scheduled
+        // * [~] canceled
+
+        if (startText === '* [ ] ') {
+            return spaces + '* [~] ' + sentence;
+        }
+        else if (startText === '* [~] ') {
+            return spaces + '* [<] ' + sentence;
+        }
+        else if (startText === '* [<] ') {
+            return spaces + '* [>] ' + sentence;
+        }
+        else if (startText === '* [>] ') {
+            return spaces + '* [-] ' + sentence;
+        }
+        else if (startText === '* [-] ') {
+            return spaces + '* [o] ' + sentence;
+        }
+        else if (startText === '* [o] ') {
+            return spaces + '* [x] ' + sentence;
+        }
+        else if (startText === '* [x] ') {
+            return spaces + '* [ ] ' + sentence;
+        }
+        else if (startText === '- [ ] ') {
+            return spaces + '- [~] ' + sentence;
+        }
+        else if (startText === '- [~] ') {
+            return spaces + '- [<] ' + sentence;
+        }
+        else if (startText === '- [<] ') {
+            return spaces + '- [>] ' + sentence;
+        }
+        else if (startText === '- [>] ') {
+            return spaces + '- [-] ' + sentence;
+        }
+        else if (startText === '- [-] ') {
+            return spaces + '- [o] ' + sentence;
+        }
+        else if (startText === '- [o] ') {
+            return spaces + '- [x] ' + sentence;
+        }
+        else if (startText === '- [x] ') {
+            return spaces + '- [ ] ' + sentence;
+        }
+        else {
+            return spaces + '- [ ] ' + sentence;
+        }
+
+    };
+
 
     return RapidLogging;
 }(obsidian.Plugin));

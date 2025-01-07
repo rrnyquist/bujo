@@ -35,7 +35,7 @@ Rapid Logging just adds more task variations. Namely:
 - [~] canceled
 ```
 
-In Obsidian, all the above tasks (except for "todo") will be represented with a completed checkmark. What this plugin does is enable custom formatting for each type, and allow the user to cycle through the plugin types in the order listed above (todo, done, event, note...) using a hotkey. By default, this hotkey is set to `Ctrl + M`. You can change this hotkey by searching "Rapid Logging" in `Options > Hotkeys`.
+In Obsidian, all the above tasks (except for "todo") will be represented with a completed checkmark. What this plugin does is enable custom formatting for each type, and allow the user to cycle through the plugin types in the order listed above (todo, done, event, note...) using a hotkey. By default, this hotkey is set to `Ctrl + Enter`, and the hotkey for toggling in reverse order is `Ctrl + Shift + Enter`. You can change this hotkey by searching "Rapid Logging" in `Options > Hotkeys`.
 
 ### Syntax Example
 ```
