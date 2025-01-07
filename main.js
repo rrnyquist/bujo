@@ -97,15 +97,17 @@ var RapidLogging = /** @class */ (function (_super) {
         var selection = editor.somethingSelected();
         var selectedText = this.getSelectedText(editor);
         var newString = selectedText.content.replace(re, subst);
-        // console.log(newString);
+    
+        // Get the line of the selected text
+        var line = editor.getLine(selectedText.start.line);
+        var cursorPos = editor.getCursor(); // Get the cursor position as an object { line, ch }
+
+        // Replace the range with the new string
         editor.replaceRange(newString, selectedText.start, selectedText.end);
-        // Keep cursor in the same place
-        if (selection) {
-            editor.setSelection(selectedText.start, {
-                line: selectedText.end.line,
-                ch: editor.getLine(selectedText.end.line).length,
-            });
-        }
+
+        // Keep the cursor in an appropriate position
+        editor.setCursor(selectedText.start.line, (newString.length - line.length) + cursorPos.ch);
+        
     };
     RapidLogging.prototype.toggleTodos = function () {
         // * [ ] todo
